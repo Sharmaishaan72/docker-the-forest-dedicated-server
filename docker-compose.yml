@@ -1,8 +1,11 @@
 services:
   the-forest-dedicated-server:
     container_name: the-forest-dedicated-server
-    image: jammsen/the-forest-dedicated-server:latest
-    restart: always
+    image: the-forest-dedicated-server:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
     ports:
       - 8766:8766/udp
       - 27015:27015/udp
