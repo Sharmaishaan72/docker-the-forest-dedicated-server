@@ -10,7 +10,15 @@ services:
       - 8766:8766/udp
       - 27015:27015/udp
       - 27016:27016/udp
-    env_file:
-      - ./default.env
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TIMEZONE: ${TZ}
+      SERVER_SETTINGS_MODE: ${SERVER_SETTINGS_MODE}
+      ALWAYS_UPDATE_ON_START: ${ALWAYS_UPDATE_ON_START}
+      SERVER_STEAM_ACCOUNT_TOKEN: ${SERVER_STEAM_ACCOUNT_TOKEN}
+      SERVER_NAME: ${SERVER_NAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      SERVER_PASSWORD: ${SERVER_PASSWORD}
     volumes:
       - ./game:/theforest
