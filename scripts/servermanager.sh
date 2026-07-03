@@ -93,7 +93,7 @@ function startServer() {
     rm -f /tmp/.X1-lock 2> /dev/null
     # shellcheck disable=SC2164
     cd "$GAME_PATH"
-    wine64 "$GAME_PATH"/TheForestDedicatedServer.exe -batchmode -dedicated -savefolderpath "$GAME_SAVEGAME_PATH" -configfilepath "$GAME_CONFIGFILE_PATH"
+    wine "$GAME_PATH"/TheForestDedicatedServer.exe -batchmode -dedicated -savefolderpath "$GAME_SAVEGAME_PATH" -configfilepath "$GAME_CONFIGFILE_PATH"
 }
 
 function stopServer() {
