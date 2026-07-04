@@ -21,4 +21,4 @@ services:
       ADMIN_PASSWORD: ${ADMIN_PASSWORD}
       SERVER_PASSWORD: ${SERVER_PASSWORD}
     volumes:
-      - ./game:/theforest
+      - /opt/theforest-data:/theforest
